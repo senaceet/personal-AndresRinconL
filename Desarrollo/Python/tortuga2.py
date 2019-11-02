@@ -1,0 +1,15 @@
+import turtle
+
+window = turtle.Screen()
+andres = turtle.Turtle()
+andres.shape("turtle")
+andres.left(45)
+andres.forward(50)
+andres.left(90) 
+andres.forward(50)
+andres.left(90) 
+andres.forward(50)
+andres.left(90) 
+andres.forward(50)
+andres.left(90)
+turtle.mainloop()
