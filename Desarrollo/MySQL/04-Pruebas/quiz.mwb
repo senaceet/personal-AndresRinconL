@@ -1,0 +1,23 @@
+drop database quiz;
+create database quiz;
+use quiz;
+
+create table usuario(
+Numero_id varchar(25) not null,
+PrimerNombre varchar (25) not null,
+SegunNombre varchar	(25),
+PrimerApellido varchar (25) not null,
+SegunApellido varchar (25),
+Correo varchar (50) not null,
+Contraseña varchar (50) not null,
+FK_id_tpdoc int	not null
+);
+
+create table tipo_documento(
+Id_tpdoc int not null,
+Acronimo varchar (5) not null,
+Nom_tpdoc varchar (25),
+primary key (Id_tpdoc)
+);
+alter table usuario add foreign key (FK_id_tpdoc) references tipo_documento (Id_tpdoc);
+alter table usuario add primary key (Numero_id,FK_id_tpdoc);
