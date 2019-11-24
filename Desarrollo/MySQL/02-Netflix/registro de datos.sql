@@ -1,3 +1,4 @@
+#drop database netflix;
 use netflix;
 select * from netflix.tipo_documento;
 insert into netflix.tipo_documento (ID_documento,siglas,nombre_tipo_documento)
@@ -121,45 +122,45 @@ values(1,'tarjeta credito'),
 (3,'codigo promocional');
 select *from netflix.usuario;
 insert into netflix.usuario (Numero_documento,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,email,contraseña,FK_ID_documento,FK_ID_rol,FK_ID_plan)
-values(1636012383599,'Irma','Rosalyn','Mullen','Cote','pulvinar.arcu.et@Nullatinciduntneque.org','IKC07VII1NL',1,2,2),
+values(1636012383599,'Irma','Rosalyn','Mullen','Cote','pulvinar.arcu.et@Nullatinciduntneque.org','IKC07VII1NL',1,1,2),
 (1695062224499,'Charlotte',null,'Mccormick','Strong','Sed.molestie@iaculisodio.org','CIQ67PVL5EX',1,2,2),
-(1662041247199,'Elton','Hakeem','Morris','Howell','Donec.est@temporeratneque.net','JPC81QFH3JG',1,2,2),
+(1662041247199,'Elton','Hakeem','Morris','Howell','Donec.est@temporeratneque.net','JPC81QFH3JG',2,2,2),
 (1660062872399,'Ali','Reagan','Daniels','Owen','habitant.morbi.tristique@Nullamsuscipit.com','FMU73YOW0MM',1,2,3),
-(1668040515399,'Salvador','Desirae','Stevens',null,'libero.lacus.varius@Quisque.co.uk','PWL76KXQ4FG',1,2,3),
+(1668040515399,'Salvador','Desirae','Stevens',null,'libero.lacus.varius@Quisque.co.uk','PWL76KXQ4FG',3,2,3),
 (1662101568299,'Quin','Paki','Ford','Hahn','semper.tellus.id@Proinvelnisl.ca','GMU34EQF1NR',1,2,1),
 (1694050100899,'Jeremy',null,'Hahn','Trujillo','nec@adipiscinglobortisrisus.net','SGU29VRZ0IS',1,2,1),
-(1628012272099,'Dacey','Chanda','Gates','Foreman','cursus.vestibulum@Vivamusnon.edu','MWX02YMX4GM',1,2,3),
-(1608051762299,'Ayanna','Thor','Mayer',null,'eu.tellus@augue.com','PPV93BGM9CX',1,2,3),
+(1628012272099,'Dacey','Chanda','Gates','Foreman','cursus.vestibulum@Vivamusnon.edu','MWX02YMX4GM',3,2,3),
+(1608051762299,'Ayanna','Thor','Mayer',null,'eu.tellus@augue.com','PPV93BGM9CX',3,2,3),
 (1670072699699,'Keefe',null,'Fox','Shepard','Aliquam.gravida.mauris@egestas.net','DQU71WDL2OY',1,2,2),
-(1676090228999,'James','Oprah','Dickerson','Turner','ut.molestie@morbitristiquesenectus.co.uk','TUB17VSF8MZ',1,2,2),
+(1676090228999,'James','Oprah','Dickerson','Turner','ut.molestie@morbitristiquesenectus.co.uk','TUB17VSF8MZ',3,2,2),
 (1623083099799,'Aurelia',null,'Gordon','Merrill','Integer.id@sedpede.ca','GZB91BTY9WN',1,2,1),
-(1687060309399,'Kylynn','Aubrey','Daniel',null,'mattis@eu.com','YDS91KRH4PL',1,2,1),
+(1687060309399,'Kylynn','Aubrey','Daniel',null,'mattis@eu.com','YDS91KRH4PL',2,2,1),
 (1654011145999,'Mollie','Jacqueline','Murphy','Henderson','nisi.magna@Nuncmauris.edu','KDF36PDZ2DU',1,2,3),
 (1692090422599,'Dara',null,'Cook','Herrera','scelerisque@nonante.edu','PGW34XEV7KM',1,2,3),
-(1624060419399,'Xenos','Libby','Flynn','Morris','Curabitur@velitAliquamnisl.edu','PVJ34CMM2DX',1,2,3),
-(1651011048199,'Rajah','Gage','Barry',null,'lobortis.Class@egestasurna.ca','BSZ77PRI6GH',1,2,3),
+(1624060419399,'Xenos','Libby','Flynn','Morris','Curabitur@velitAliquamnisl.edu','PVJ34CMM2DX',2,2,3),
+(1651011048199,'Rajah','Gage','Barry',null,'lobortis.Class@egestasurna.ca','BSZ77PRI6GH',2,2,3),
 (1680091992499,'Gloria',null,'Kirkland','Cote','est.vitae@fermentum.edu','CFJ88XPJ2RM',1,2,1),
 (1691012831199,'Blake','Angela','Schroeder','Knight','natoque.penatibus.et@quistristiqueac.ca','BMH07NRZ2UY',1,2,1),
 (1698091149999,'Cedric',null,'Webster',null,'Curae.Phasellus@elitCurabitur.com','WSF42WGJ0OS',1,2,2);
 select * from netflix.perfil;
-insert into netflix.perfil (ID_perfil,nombre_perfil,avatar,FK_numero_documento,FK_ID_tpdoc)
+insert into netflix.perfil (ID_perfil,nombre_perfil,avatar,FKUSU_numero_documento,FKUSU_ID_documento)
 values (1,'Solomon',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1636012383599,1),
 (2,'Hamilton',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1695062224499,1),
-(3,'Medge',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1662041247199,1),
+(3,'Medge',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1662041247199,2),
 (4,'Dylan',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1660062872399,1),
-(5,'Lane',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1668040515399,1),
+(5,'Lane',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1668040515399,3),
 (6,'Maite',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1662101568299,1),
 (7,'Yoshio',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1694050100899,1),
-(8,'Quin',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1628012272099,1),
-(9,'Laith',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1608051762299,1),
+(8,'Quin',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1628012272099,3),
+(9,'Laith',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1608051762299,3),
 (10,'Shelby',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1670072699699,1),
-(11,'Audra',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1676090228999,1),
+(11,'Audra',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1676090228999,3),
 (12,'Adrian',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1623083099799,1),
-(13,'Quinlan',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1687060309399,1),
+(13,'Quinlan',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1687060309399,2),
 (14,'Frances',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1654011145999,1),
 (15,'Moana',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1692090422599,1),
-(16,'Madeson',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1624060419399,1),
-(17,'Whitney',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1651011048199,1),
+(16,'Madeson',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1624060419399,2),
+(17,'Whitney',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1651011048199,2),
 (18,'Charles',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1680091992499,1),
 (19,'Audra',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1691012831199,1),
 (20,'Dalton',('C:\Users\POLAR\Documents\Bin\Netflix\smile.png'),1698091149999,1);
@@ -208,7 +209,7 @@ values (1,20),
 (19,2),
 (20,1);
 select * from netflix.perfil_peliculas;
-insert into netflix.perfil_peliculas(FK_ID_pelicula,FK_ID_perfil)
+insert into netflix.perfil_peliculas(FK_ID_pelicula,peFK_ID_perfil)
 values(1,20),
 (2,19),
 (3,18),

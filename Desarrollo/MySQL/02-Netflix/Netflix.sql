@@ -1,5 +1,5 @@
-drop database	Netflix;
-create database Netflix;
+drop database	netflix;
+create database netflix;
 Create table netflix.perfil(
 ID_perfil int not null,
 nombre_perfil varchar (15) not null,
@@ -62,10 +62,10 @@ primary key (ID_serie)
 
  create table netflix.perfil_peliculas(
  FK_ID_pelicula int not null,
- FK_ID_perfil int not null,
- primary key (FK_ID_pelicula,FK_ID_perfil)
+ peFK_ID_perfil int not null,
+ primary key (FK_ID_pelicula,peFK_ID_perfil)
   );
- alter table netflix.perfil_peliculas add constraint ID_perfil foreign key (FK_ID_perfil) references netflix.perfil (ID_perfil) on update cascade;
+ alter table netflix.perfil_peliculas add constraint ID_perfil foreign key (peFK_ID_perfil) references netflix.perfil (ID_perfil) on update cascade;
  alter table netflix.perfil_peliculas add constraint FK_ID_pelicula foreign key (FK_ID_pelicula) references netflix.peliculas (ID_pelicula) on update cascade;
 
 create table netflix.idioma (
@@ -128,6 +128,7 @@ alter table netflix.capitulos add constraint FK_ID_temporada foreign key (FK_ID_
  );
  alter table netflix.idioma_capitulos add constraint ID_capitulos foreign key (FK_ID_capitulos) references netflix.capitulos (ID_capitulo) on update cascade;
  alter table netflix.idioma_capitulos add constraint ID_idioma foreign key (FK_ID_idioma) references netflix.idioma (ID_idioma) on update cascade;
+ 
 create table netflix.tipo_pago(
 ID_tipopago int not null,
 nombre_tipopago varchar (30)not null,
@@ -151,7 +152,7 @@ alter table netflix.usuario add constraint FK_ID_plan foreign key (FK_ID_plan) r
 alter table netflix.usuario add constraint FK_ID_rol foreign key (FK_ID_rol) references netflix.rol (ID_rol) on update cascade;
 alter table netflix.usuario add constraint FK_ID_documento foreign key (FK_ID_documento) references netflix.tipo_documento (ID_documento) on update cascade;
 
-alter table netflix.perfil add constraint nimero_tpdoc foreign key (FKUSU_numero_documento,FKUSU_ID_documento) references netflix.usuario (Numero_documento,FK_ID_documento) on update cascade;
+alter table netflix.perfil add constraint numero_tpdoc foreign key (FKUSU_numero_documento,FKUSU_ID_documento) references netflix.usuario (Numero_documento,FK_ID_documento) on update cascade;
 
 create table netflix.factura (
 ID_factura int not null,
